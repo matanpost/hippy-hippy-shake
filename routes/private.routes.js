@@ -3,8 +3,13 @@ const router = express.Router();
 
 
 /* GET members content */
-router.get("/private", (req, res, next) => {
-    res.render("memberOnly");
+router.get("/", (req, res, next) => {
+    res.render("membersOnlyRecipes");
+  });
+
+  /* GET members content */
+router.get("/:recipeId", (req, res, next) => {
+    res.render("membersRecipeDetails");
   });
 
 

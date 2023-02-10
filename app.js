@@ -35,7 +35,7 @@ app.use('/recipes', recipesRoutes)
 
 //private - members content
 const memberRoutes = require('./routes/private.routes')
-app.use('/private', memberRoutes)
+app.use('/members', memberRoutes)
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
