@@ -7,7 +7,7 @@ const Recipe = require('../models/Recipe.model')
 router.get("/",  async (req, res, next) => {
   try { 
     const allRecipes = await Recipe.find();
-    res.render("cocktailRecipes");
+    res.render("cocktailRecipes", {recipes: allRecipes});
   }catch(error){
     console.log('Route to all recipes', error)
   };
