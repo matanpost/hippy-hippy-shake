@@ -29,7 +29,7 @@ router.post("/signup", async (req, res, next) => {
   body.passwordHash = passwordHash
 
   await User.create(body)
-  res.redirect('/login');
+  res.redirect('/auth');
 });
 
 
