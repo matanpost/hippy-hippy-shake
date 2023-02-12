@@ -1,6 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
+const User = require("../models/User.model");
+
+const bcrypt = require('bcryptjs')
+
+
 /* GET home page */
 router.get("/", (req, res, next) => {
   res.render("home");
@@ -33,8 +38,8 @@ router.post("/signup", async (req, res, next) => {
 
 /* GET login page */
 router.get("/login", (req, res, next) => {
-    res.render("login");
-  });
+  res.render("login");
+});
 
   /* POST login page */
   router.post("/login", async (req, res, next) => {

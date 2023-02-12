@@ -28,6 +28,16 @@ const authRoutes = require('./routes/auth.routes')
 app.use('/auth', authRoutes)
 
 
+//recipes
+const recipesRoutes = require('./routes/recipes.routes')
+app.use('/recipes', recipesRoutes)
+
+
+//private - members content
+const memberRoutes = require('./routes/private.routes')
+app.use('/members', memberRoutes)
+
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app)
 

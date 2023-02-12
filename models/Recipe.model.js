@@ -2,10 +2,14 @@ const { Schema, model } = require('mongoose')
 
 const recipeSchema = new Schema(
   {
-    title: {
+    name: {
       type: String,
       required: true,
       unique: true,
+    },
+    image: {
+      type: String,
+      required: false,
     },
     ingredients: {
       type: [String],
@@ -14,6 +18,10 @@ const recipeSchema = new Schema(
     instructions: {
       type: [String],
       required: true,
+    },
+    glass: {
+      type: String,
+      required: false,
     },
     owner: {
       type: Schema.Types.ObjectId,
