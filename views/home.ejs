@@ -3,3 +3,8 @@
     signup btn
     login btn
 </h1>
+<h1>WELCOME <% if (user.username) { %>
+    <%= user.username %>
+  <% } else { %>
+  to HIPPY HIPPY SHAKE
+  <% } %></h1>
