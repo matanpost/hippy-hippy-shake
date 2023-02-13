@@ -3,15 +3,15 @@ const router = express.Router();
 
 /* GET landing page */
 router.get("/", (req, res, next) => {
-  res.render("landing");
+  res.render("landing", {user: req.session.user || "undefined"});
 });
 
 router.get("/recipes", (req, res, next) => {
-  res.render("cocktailRecipes");
+  res.render("cocktailRecipes", {user: req.session.user || "undefined"});
 });
 
 router.get("/recipes/recipeDetails", (req, res, next) => {
-  res.render("recipeDetails");
+  res.render("recipeDetails", {user: req.session.user || "undefined"});
 });
 
 
