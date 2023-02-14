@@ -16,20 +16,23 @@ router.get("/AllRecipes",  async (req, res) => {
 
 /* GET new cocktail recipe page */
 router.get("/new", (req, res) => {
-  res.render("newRecipe",  {user: req.session.user || "undefined"});
+  res.render("newRecipe",  {user: req.session.user || "undefined", update: false});
 })
 
 /* POST new cocktail recipe*/
 router.post('/new', async (req, res) => {
-  console.log(req.body)
   try {
-    // const user = {user: req.session.user || "undefined"}
-    // console.log(user)
     const newRecipe = await Recipe.create({
       ...req.body,
       ingredients: req.body.ingredients.split(','),
+      owner:req.session.user,
+
     })
-    res.redirect(`/recipes/${newRecipe._id}`)
+    console.log(req.body)
+    console.log(req.session.user)
+    console.log(req.body.owner)
+
+    res.redirect(`/recipes/${newRecipe._id}/details`)
   } catch (error) {
     console.log(error)
   }
@@ -38,7 +41,7 @@ router.post('/new', async (req, res) => {
 /* POST cocktail recipe --- UPDATE */
 router.get('/:recipeId/update', async (req, res) => {
   const recipe = await Recipe.findById(req.params.recipeId)
-  res.render('recipes/new', { recipe, update: true })
+  res.render('newRecipe', { recipe, update: true, user: req.session.user || "undefined"})
 })
 
 router.post('/:recipeId/update', async (req, res) => {
@@ -46,22 +49,20 @@ router.post('/:recipeId/update', async (req, res) => {
     ...req.body,
     ingredients: req.body.ingredients.split(' '),
   })
-
-  res.redirect(`/recipes/${req.params.recipeId}`)
+  res.redirect(`/recipes/${req.params.recipeId}/details`)
 })
 
 /* POST cocktail recipe --- DELETE*/
-router.post('/:recipeId/delete', async (req, res) => {
+router.get('/:recipeId/delete', async (req, res) => {
   await Recipe.findByIdAndDelete(req.params.recipeId)
-
-  res.redirect('/recipes')
+  res.redirect('/recipes/AllRecipes')
 })
 
 
 /* GET cocktail detail page */
-router.get("/:recipeId", async (req, res) => {
+router.get("/:recipeId/details", async (req, res) => {
   const recipeDetails = await Recipe.findById(req.params.recipeId)
-  console.log(recipeDetails)
+  // console.log(recipeDetails)
   res.render("recipeDetails", {recipe: recipeDetails, user: req.session.user || "undefined"});
 })
 

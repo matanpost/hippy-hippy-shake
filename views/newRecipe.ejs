@@ -1,11 +1,21 @@
 
 
 <h1>Share your Recipes</h1>
-<form style="display: flex; flex-direction: column" method="POST" action="/recipes/new">
-  <label> Name : <input type="text" name="name" /></label>
-  <label>Image : <input type="text" name="image" /></label>
-  <label>Ingredients : <input type="text" name="ingredients" /></label>
-  <label>Instructions : <input type="text" name="instructions" /></label>
-  <label>Type of Glass : <input type="text" name="glass" /></label>
-  <button type="submit">Submit your recipe</button>
+<form style="display: flex; flex-direction: column" method="POST" action="<% if (update) { %>
+  /recipes/<%- recipe._id %>/update
+ <% } else { %>
+  /recipes/new
+<% } %>">
+  <label> Name : <input type="text" name="name" value="<% if (update) { %><%= recipe.name %><% } %>" /></label>
+  <label>Image : <input type="text" name="image" value="<% if (update) { %><%= recipe.image %><% } %>"/></label>
+  <label>Ingredients : <input type="text" name="ingredients" value="<% if (update) { %><%= recipe.ingredients.join(',') %><% } %>" /></label>
+  <label>Instructions : <input type="text" name="instructions" value="<% if (update) { %><%= recipe.instructions %><% } %>" /></label>
+  <label>Type of Glass : <input type="text" name="glass" value="<% if (update) { %><%= recipe.glass %><% } %>"/></label>
+  <button type="submit">
+    <% if (update) { %>
+      Update your Recipe
+    <% } else { %>
+      Create new recipe
+    <% } %>
+  </button>
 </form>
