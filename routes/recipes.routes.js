@@ -7,7 +7,7 @@ const Recipe = require('../models/Recipe.model')
 router.get("/AllRecipes",  async (req, res) => {
   try { 
     const allRecipes = await Recipe.find();
-    console.log('All recipes :', allRecipes)
+    // console.log('All recipes :', allRecipes)
     res.render("cocktailRecipes", {recipes: allRecipes, user: req.session.user || "undefined"});
   }catch(error){
     console.log('Route to all recipes', error)
@@ -59,8 +59,10 @@ router.post('/:recipeId/delete', async (req, res) => {
 
 
 /* GET cocktail detail page */
-router.get("/:recipeId", (req, res) => {
-  res.render("recipeDetails", {user: req.session.user || "undefined"});
+router.get("/:recipeId", async (req, res) => {
+  const recipeDetails = await Recipe.findById(req.params.recipeId)
+  console.log(recipeDetails)
+  res.render("recipeDetails", {recipe: recipeDetails, user: req.session.user || "undefined"});
 })
 
 
