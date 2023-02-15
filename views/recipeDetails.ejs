@@ -14,5 +14,10 @@
   
   <p><%= recipe.instructions%></p>
 
-  <a href="/recipes/<%- recipe._id %>/update" class="btn btn-primary">Update</a>
-  <a href="/recipes/<%- recipe._id %>/delete" class="btn btn-primary">Delete</a>
+  <% if (user.username) { %>
+    <a href="/recipes/<%- recipe._id %>/update" class="btn btn-primary">Update</a>
+    <a href="/recipes/<%- recipe._id %>/delete" class="btn btn-primary">Delete</a>
+    <a href="/recipes/AllRecipes" class="btn btn-primary">Back to cocktails</a>
+  <% } else { %>
+    <a href="/recipes/AllRecipes" class="btn btn-primary">Back to cocktails</a>
+  <% } %>
