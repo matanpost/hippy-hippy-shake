@@ -5,12 +5,14 @@
 <label for="volume-control">Volume:</label>
 <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
 
+<div class="home-top">
 <div class="homeshaker"></div>
 <h1>WELCOME <% if (user.username) { %>
     <%= user.username %>
   <% } else { %>
   to HIPPY HIPPY SHAKE
   <% } %></h1>
+
 
   <script>
     // an event for playing the music
@@ -38,3 +40,5 @@
 
   });
   </script>
+
+</div>

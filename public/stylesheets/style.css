@@ -1,28 +1,29 @@
 body {
   margin: 0;
   padding: 0px;
-  font-size: 14px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  display: flex;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display:flex;
   flex-direction: column;
   align-items:center;
   justify-content:center;
   height:100vh;
 }
-
+.nav{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+}
 /* a {
-  color: #00b7ff;
+  color: #00B7FF;
 } */
-
 /* h1 {
   color: 15px;
 } */
-
 .container {
 margin:50px 0 0 0;
 padding: 20px;
 }
-
 .landing-bgimg {
   width: 100vw;
   min-height: 100vh;
@@ -41,7 +42,6 @@ padding: 20px;
   position:absolute;
   background-repeat: no-repeat;
 }
-
 .signUp-bgimg {
   width: 100vw;
   min-height: 100vh;
@@ -50,7 +50,6 @@ padding: 20px;
   background-attachment:fixed;
   background-repeat: no-repeat;
 }
-
 .addRecipe-bgimg {
   width: 100vw;
   min-height: 100vh;
@@ -59,22 +58,19 @@ padding: 20px;
   background-attachment:fixed;
   background-repeat: no-repeat;
 }
-
 .first-div-width{
   /* display: flex;
   flex-wrap:wrap; */
   max-width: 90vw;
   margin: auto;
 }
-
 .recipe-details{
   margin:auto;
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 50px;
-  max-width: 500px; 
+  max-width: 500px;
 }
-
 .recipe-details-bg{
   width: 100vw;
   height: 100vh;
@@ -82,26 +78,21 @@ padding: 20px;
   background-size: 120vw;;
   background-attachment:fixed  ;
 }
-
 .recipe-details-bg h1{
   color:rgb(18, 18, 18);
 }
-
 .center-forms{
       margin: 0 auto;
     width:80% /* value of your choice which suits your alignment */
 }
-
 /* .img-fluid {
   max-height: 80vh;
 } */
-
 .card-img-top {
   width: 100%;
   height: 20vw;
   object-fit: cover;
 }
-
 div [class^="col-"]{
   margin:0;
   padding-left:5px;
@@ -111,30 +102,28 @@ div [class^="col-"]{
   transition:0.5s;
   cursor:pointer;
 }
-.card-title{  
+.card-title{
   font-size:15px;
   transition:1s;
   cursor:pointer;
 }
-.card-title i{  
+.card-title i{
   font-size:15px;
   transition:0.5s;
   cursor:pointer;
   color:#fff
 }
 .card-title i:hover{
-  transform: scale(1.5) rotate(100deg); 
+  transform: scale(1.5) rotate(100deg);
   color:#18d4ca;
-  
 }
 .card:hover{
   transform: scale(1.05);
   box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
 }
 .card-text{
-  height:80px;  
+  height:80px;
 }
-
 .card::before, .card::after {
   position: absolute;
   top: 0;
@@ -156,6 +145,24 @@ div [class^="col-"]{
 .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
   transform: scale3d(1, 1, 1);
 }
+@media only screen and (max-width: 600px) {
+ .logo-nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #main-nav {
+     padding: 20px 0px 20px 30px;
+   }
+   .navbar-brand {
+font-size:20px;
+text-align: right;
+padding-right: 0px;
+   }
+   li{
+    margin:5px 0 5px 0;
+   }
+ }
 
 .homeshaker {
   background-image: url('/images/shaker-anim.png');
