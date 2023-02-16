@@ -3,6 +3,8 @@ const router = express.Router();
 
 const Recipe = require('../models/Recipe.model')
 
+const uploader = require('../middleware/cloudinary.config');
+
 /* GET cocktail gallery page */
 router.get("/AllRecipes",  async (req, res) => {
   try { 
@@ -20,23 +22,47 @@ router.get("/new", (req, res) => {
 })
 
 /* POST new cocktail recipe*/
-router.post('/new', async (req, res) => {
+router.post('/new', uploader.single("imageUrl"), async (req, res) => {
+  console.log('file is: ', req.file)
+    if (!req.file) {
+      console.log("there was an error uploading the file")
+      next(new Error('No file uploaded!'));
+      return;
+    }
+
   try {
     const newRecipe = await Recipe.create({
       ...req.body,
       ingredients: req.body.ingredients.split(','),
       owner:req.session.user,
+      image: req.file.path
 
     })
     console.log(req.body)
     console.log(req.session.user)
     console.log(req.body.owner)
+    
 
     res.redirect(`/recipes/${newRecipe._id}/details`)
   } catch (error) {
     console.log(error)
   }
 })
+
+//POST adding a file
+/* router.post('/new', uploader.single("imageUrl"), (req, res, next) => {
+  // the uploader.single() callback will send the file to cloudinary and get you and obj with the url in return
+  console.log('file is: ', req.file)
+  
+  if (!req.file) {
+    console.log("there was an error uploading the file")
+    next(new Error('No file uploaded!'));
+    return;
+  }
+  
+  // You will get the image url in 'req.file.path'
+  // Your code to store your url in your database should be here
+}) */
 
 /* POST cocktail recipe --- UPDATE */
 router.get('/:recipeId/update', async (req, res) => {

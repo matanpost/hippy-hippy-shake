@@ -8,11 +8,15 @@
 /* Set a background image or color for the page */
 .landingPageBody {
 	background-size: cover;
-  background: url("/images/landing-page2.jpg") center left no-repeat;
+}
+
+.landingPic {
+	display: flex;
+    justify-content: center;
 }
 
 .landingPic img{
-  size: 200px;
+  height: 400px;
 }
 
 /* Center the header and age verification form */
@@ -65,7 +69,7 @@ input[type="date"] {
 	font-size: 1.2rem;
 }
 
-button {
+#verify-age {
 	background-color: #a07f58;
 	color: lightseagreen;
 	border: #000000;
@@ -73,26 +77,44 @@ button {
 	font-size: 1.2rem;
 	cursor: pointer;
   font-family: fantasy; 
-  border-radius: 50%;
+  border-radius: 80px 80px 80px 80px;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+#verify-age span{
+	background: url(images/) no-repeat;
 }
 
 /* Use media queries to adjust styles for different screen sizes */
 @media screen and (max-width: 768px) {
 	/* For screens smaller than 768px, reduce the font size of the header and increase the padding of the age verification form */
-	.header {
-		font-size: 2rem;
+	.header h1{
+		font-size: 3rem;
 		padding: 1rem;
 	}
 
 	.age-verification {
 		padding: 3rem;
 	}
+	.landingPic img{
+		height: 250px;
+	}
+
+	.content h2{
+		font-size: 2.4rem;
+	}
 }
 
 @media screen and (max-width: 480px) {
 	/* For screens smaller than 480px, reduce the font size of the header even further */
-	.header {
-		font-size: 1.5rem;
+	.header h1{
+		font-size: 2.5rem;
+	}
+	.landingPic img{
+		height: 120px;
+	  }
+
+	  .content h2{
+		font-size: 1.8rem;
 	}
 }

@@ -8,8 +8,7 @@ const recipeSchema = new Schema(
       unique: true,
     },
     image: {
-      type: String,
-      required: false,
+      type: String
     },
     ingredients: {
       type: [String],
