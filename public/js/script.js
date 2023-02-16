@@ -28,7 +28,9 @@ function calculateAge(birthdate) {
 window.addEventListener('load', () => {
   const audio = document.getElementById('hippy-shake');
   const button = document.getElementById('play-button');
-  
+  const volumeControl = document.getElementById('volume-control');
+  // Set initial volume to 100%
+  audio.volume = 1;
   // Add event listener to the button to play the audio when clicked
   button.addEventListener('click', () => {
     if (audio.paused) {
@@ -39,18 +41,24 @@ window.addEventListener('load', () => {
       button.textContent = 'Play';
     }
   });
-});
-
-// volume
-window.addEventListener('load', () => {
-  const audio = document.getElementById('hippy-shake');
-  const volumeControl = document.getElementById('volume-control');
-
-  // Set initial volume to 100%
-  audio.volume = 1;
-
+  
   // Add event listener to the volume control to update the volume when changed
   volumeControl.addEventListener('input', () => {
     audio.volume = volumeControl.value;
   });
+
 });
+
+// volume
+// window.addEventListener('load', () => {
+//   const audio = document.getElementById('hippy-shake');
+//   const volumeControl = document.getElementById('volume-control');
+
+//   // Set initial volume to 100%
+//   audio.volume = 1;
+
+//   // Add event listener to the volume control to update the volume when changed
+//   volumeControl.addEventListener('input', () => {
+//     audio.volume = volumeControl.value;
+//   });
+// });
