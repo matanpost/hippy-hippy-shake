@@ -1,4 +1,10 @@
 
+<!-- code for the audio element -->
+<audio id="hippy-shake" src="/audio/The Hippy Hippy Shake.mp3"></audio>
+<button id="play-button">Sound</button>
+<label for="volume-control">Volume:</label>
+<input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+
 <div class="homeshaker"></div>
 <h1>WELCOME <% if (user.username) { %>
     <%= user.username %>

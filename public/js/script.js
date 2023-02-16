@@ -23,3 +23,34 @@ function calculateAge(birthdate) {
   }
   return age;
 }
+
+// an event for playing the music
+window.addEventListener('load', () => {
+  const audio = document.getElementById('hippy-shake');
+  const button = document.getElementById('play-button');
+  
+  // Add event listener to the button to play the audio when clicked
+  button.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      button.textContent = 'Stop';
+    } else {
+      audio.pause();
+      button.textContent = 'Play';
+    }
+  });
+});
+
+// volume
+window.addEventListener('load', () => {
+  const audio = document.getElementById('hippy-shake');
+  const volumeControl = document.getElementById('volume-control');
+
+  // Set initial volume to 100%
+  audio.volume = 1;
+
+  // Add event listener to the volume control to update the volume when changed
+  volumeControl.addEventListener('input', () => {
+    audio.volume = volumeControl.value;
+  });
+});
