@@ -1,19 +1,158 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0px;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
 }
 
-a {
+/* a {
   color: #00b7ff;
-}
+} */
 
-h1 {
+/* h1 {
   color: 15px;
+} */
+
+.container {
+margin:50px 0 0 0;
+padding: 20px;
 }
 
+.landing-bgimg {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('https://img.freepik.com/premium-photo/two-cocktail-drinks-with-blur-beach-party-people-colorful-sunset-sky-background-luxury_663265-3219.jpg?w=2000');
+  background-size: cover;;
+  background-attachment:fixed;
+  position:absolute;
+  background-repeat: no-repeat;
+}
+.signIn-bgimg {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('https://img.freepik.com/free-photo/bartender-preparing-cocktail-counter_107420-96319.jpg?w=2000&t=st=1676488865~exp=1676489465~hmac=bfb6b4bd5adf5bb44b739903230f8579a1d3da2842df7e3c825b464edd6dd673?w=2000');
+  background-size: cover;;
+  background-attachment:fixed;
+  position:absolute;
+  background-repeat: no-repeat;
+}
+
+.signUp-bgimg {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('https://img.freepik.com/free-photo/picture-hands-girl-holding-cocktail-sea-background-it-looks-cool_197531-1247.jpg?w=2000&t=st=1676489979~exp=1676490579~hmac=c4149b589cc939a53131f44ac03700655ba07d2f151e6a70035b4c66bdba477c?w=2000');
+  background-size: cover;;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+}
+
+.addRecipe-bgimg {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('https://img.freepik.com/free-photo/bartender-making-alcoholic-cocktail-summer-cocktail-bar_181624-48939.jpg?w=2000&t=st=1676535877~exp=1676536477~hmac=fcabc1363eb194d5e3c60c36edd83af045a0484d42515d16717fb308e38dabfb?w=2000&t=st=1676489979~exp=1676490579~hmac=c4149b589cc939a53131f44ac03700655ba07d2f151e6a70035b4c66bdba477c?w=2000');
+  background-size: cover;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+}
+
+.first-div-width{
+  /* display: flex;
+  flex-wrap:wrap; */
+  max-width: 90vw;
+  margin: auto;
+}
+
+.recipe-details{
+  margin:auto;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 500px; 
+}
+
+.recipe-details-bg{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://img.freepik.com/free-photo/barman-pouring-alcoholic-drink-cocktail_23-2148209366.jpg?w=1800&t=st=1676548424~exp=1676549024~hmac=06a7a48a6eaaa438393d1a09b6bd2b2e895e6d0683901628796279b0f5713240');
+  background-size: 120vw;;
+  background-attachment:fixed  ;
+}
+
+.recipe-details-bg h1{
+  color:rgb(18, 18, 18);
+}
+
+.center-forms{
+      margin: 0 auto;
+    width:80% /* value of your choice which suits your alignment */
+}
+
+/* .img-fluid {
+  max-height: 80vh;
+} */
 
 .card-img-top {
   width: 100%;
-  height: 25vw;
+  height: 20vw;
   object-fit: cover;
+}
+
+div [class^="col-"]{
+  margin:0;
+  padding-left:5px;
+  padding-right:5px;
+}
+.card{
+  transition:0.5s;
+  cursor:pointer;
+}
+.card-title{  
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+}
+.card-title i{  
+  font-size:15px;
+  transition:0.5s;
+  cursor:pointer;
+  color:#fff
+}
+.card-title i:hover{
+  transform: scale(1.5) rotate(100deg); 
+  color:#18d4ca;
+  
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+  height:80px;  
+}
+
+.card::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  transform: scale3d(1, 1, 1);
 }

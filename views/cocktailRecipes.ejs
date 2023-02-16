@@ -1,18 +1,12 @@
-<h1>Cocktail Recipes</h1>
-
-<h1>Gallery</h1>
-<p>page for all recipes</p>
-
-
 <% if (!recipes.length) { %>
-There are no recipes for now!
+    There are no recipes for now!
     <% } %>
-
-    <div class="container text-center">
-        <div class="row justify-content-start ">
-            <% recipes.forEach(recipe => { %>
-            <div class="col-3">
-<%- include('./partials/recipeCard', {recipe}) %></div> <% }) %>
-            
+      <div class="container-fluid text-center landing-bgimg">
+        <div class="row justify-content-start first-div-width">
+          <% recipes.forEach(recipe=> { %>
+            <div class="col-md-3 col-sm-6 p-4 ">
+              <%- include('./partials/recipeCard', {recipe}) %>
+            </div>
+            <% }) %>
         </div>
-</div> 
+      </div>

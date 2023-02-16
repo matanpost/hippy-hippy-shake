@@ -1,4 +1,4 @@
-<h1>Signup Page</h1>
+<!-- <h1>Signup Page</h1>
 
 <h1>User signup page</h1>
 <p>Needed for member's only content (private routes for middleware usage)</p>
@@ -9,4 +9,96 @@
     <label>Email:<input type="email" name="email" required></label>
     <label>Password:<input type="password" name="password" required></label>
     <button type="submit">Signup</button>
-</form>
+</form> -->
+
+<!-- <h1>Signup Page</h1>
+<h1>User signup page</h1>
+<p>Needed for member's only content (private routes for middleware usage)</p>
+<form method="POST" name="signup" action="/auth/signup">
+    <label>Name: <input type="text" name="username" required></label>
+    <label>Age:<input type="number" name="age" required></label>
+    <label>Email:<input type="email" name="email" required></label>
+    <label>Password:<input type="password" name="password" required></label>
+    <button type="submit">Signup</button>
+</form> -->
+<div class="container-fluid align-items-center signUp-bgimg" style="height: 100vh;">
+    <div style="display:flex; justify-content: center; align-self: center; margin-top:10%;">
+        <div class="card mt-5 " style="width:30rem; background: rgba(255, 255, 255, 0.5);">
+            <form class="needs-validation px-1 py-4 text-center" novalidate method="POST" name="signup" action="/auth/signup"">
+                    <div class=" center-forms">
+                <div class="form-row ">
+                    <div class="col   mb-3">
+                        <label for="validationCustom01">Name</label>
+                        <input type="text" class="form-control" name="username" id="validationCustom01"
+                            placeholder="Your Name or Nickname" required>
+                        <div class="invalid-feedback">
+                            You need to provide your name or nickname.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col mb-3">
+                        <label for="validationCustom02">Age</label>
+                        <input type="number" name="age" class="form-control" id="validationCustom02"
+                            placeholder="You must be +21 to register" required>
+                        <div class="invalid-feedback">
+                            Please provide your age.
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col mb-3">
+                            <label for="validationCustom03">Email</label>
+                            <input type="email" class="form-control" name="email" id="validationCustom03"
+                                placeholder="Enter a valid email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col mb-3">
+                            <label for="validationCustom04">Password</label>
+                            <input type="password" name="password" id="inputPassword6" class="form-control"
+                                aria-describedby="passwordHelpInline" placeholder=" Must be 8-20 characters long."
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary" type="submit">Signup</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>

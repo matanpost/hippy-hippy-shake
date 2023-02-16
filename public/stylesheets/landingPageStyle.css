@@ -35,7 +35,9 @@
 	text-align: center;
 	margin: 0;
 	padding: 2rem;
-  font-family: 'Irish Grover', cursive;
+    font-family: 'Irish Grover', cursive;
+    height: fit-content;
+	padding-top: 60px;
 }
 
 .header h1 {
@@ -44,6 +46,12 @@
 	background-clip: text;
 	background-image: url('https://www.shutterstock.com/image-photo/young-woman-bikini-lying-on-260nw-544382269.jpg');
 	color: transparent;
+}
+
+.content {
+	height: fit-content;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .content h2 {
@@ -82,7 +90,14 @@ input[type="date"] {
 }
 
 #verify-age span{
-	background: url(images/) no-repeat;
+	background: url("/public/images/cocktail-shaker.png") no-repeat;
+	width: 60px;
+	height: 60px;
+
+}
+
+.age-verification {
+	height: 200px;
 }
 
 /* Use media queries to adjust styles for different screen sizes */
