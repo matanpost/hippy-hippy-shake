@@ -156,3 +156,20 @@ div [class^="col-"]{
 .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
   transform: scale3d(1, 1, 1);
 }
+
+.homeshaker {
+  background-image: url('/images/shaker-anim.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 400px;
+  animation: shake 0.7s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(13deg); }
+  50% { transform: rotate(-14deg); }
+  75% { transform: rotate(6deg); }
+  100% { transform: rotate(-1deg); }
+}
