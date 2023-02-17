@@ -1,24 +1,29 @@
 
 <!-- code for the audio element -->
+
+
 <div class="home-top">
 <div class="homeshaker"></div>
-<h1>WELCOME <% if (user.username) { %>
+<h1>WELCOME MEMBERS<% if (user.username) { %>
     <%= user.username %>
   <% } else { %>
-  to the HIPPY HIPPY SHAKE
+  to HIPPY HIPPY SHAKE
   <% } %></h1>
-   <p>Our cocktails are made with fresh, locally-sourced ingredients and come in a variety of fun and funky flavors.</p>
-        <p>Whether you're looking for a classic margarita or something more adventurous, we've got you covered.</p>
-       
-        <div style="display: inline-block;">
-          <a href="/recipes/AllRecipes" class="btn btn-primary">Our Cocktails</a>
-          <a href="/members/membersOnlyRecipes" class="btn btn-primary">Members Only Recipes</a>
 
-        </div>
-        <audio id="hippy-shake" src="/audio/The Hippy Hippy Shake.mp3"></audio>
+  <p>As you know  <%= user.username %>, our cocktails are made with fresh, locally-sourced ingredients and come in a variety of fun and funky flavors.</p>
+  <p>But since you're a beloved HHS member, we offer you the best secrets to make you how moonshine, gin, vocka and much much more!!</p>
+ 
+  <div style="display: inline-block;">
+    <a href="/recipes/AllRecipes" class="btn btn-primary">Our Cocktails</a>
+    <a href="/members/membersOnlyRecipes" class="btn btn-primary">Members Only Recipes</a>
+
+  </div>
+
+  <audio id="hippy-shake" src="/audio/The Hippy Hippy Shake.mp3"></audio>
 <button id="play-button">Sound</button>
 <label for="volume-control">Volume:</label>
 <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.1">
+
 
   <script>
     // an event for playing the music

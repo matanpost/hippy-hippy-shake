@@ -8,14 +8,19 @@ const { isLoggedIn, isLoggedOut } = require('../middleware/route-session');
 /* GET members content */
 router.get("/", isLoggedIn, async(req, res, next) => {
     console.log(req.session) 
-    res.render("home", {user: req.session.user});
+    res.render("members", {user: req.session.user});
     
   });
 
-  /* GET members content */
-router.get("/:recipeId", isLoggedIn, (req, res, next) => {
-    res.render("membersRecipeDetails", {user: req.session.user});
+  /* GET member profile */
+router.get("/profile", isLoggedIn, (req, res, next) => {
+    res.render("profile", {user: req.session.user});
   });
+
+    /* GET member profile */
+router.get("/membersOnlyRecipes", isLoggedIn, (req, res, next) => {
+  res.render("membersOnlyRecipes", {user: req.session.user});
+});
 
 
 

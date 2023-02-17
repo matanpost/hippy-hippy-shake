@@ -66,7 +66,7 @@
 
 /* Style the age verification form */
 .age-verification {
-	background-color: #fff;
+	background-color: #ffffff70;
 	padding: 2rem;
 }
 
@@ -78,29 +78,30 @@
 
 /* Style the input field and button in the age verification form */
 input[type="date"] {
-	border: 1px solid #ddd;
+	/* border: 1px solid #ddd; */
 	padding: 0.5rem;
 	font-size: 1.2rem;
 }
 
 #verify-age {
-	background-color: #a07f58;
-	color: lightseagreen;
-	border: #000000;
+	background-color: #0095ff;
+	color: rgb(255, 255, 255);
+	/* border: #000000; */
 	padding: 0.5rem 1rem;
+	margin: 1rem 1rem;
 	font-size: 1.2rem;
 	cursor: pointer;
   font-family: fantasy; 
   border-radius: 80px 80px 80px 80px;
-  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  /* text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000; */
 }
 
-#verify-age span{
+/* #verify-age span{
 	background: url("/public/images/cocktail-shaker.png") no-repeat;
 	width: 60px;
 	height: 60px;
 
-}
+} */
 
 .age-verification {
 	height: 200px;

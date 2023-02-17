@@ -27,11 +27,12 @@ padding: 20px;
 .landing-bgimg {
   width: 100vw;
   min-height: 100vh;
-  background-image: url('https://img.freepik.com/premium-photo/two-cocktail-drinks-with-blur-beach-party-people-colorful-sunset-sky-background-luxury_663265-3219.jpg?w=2000');
+  background-image: url('/images/summer-product-backdrop-blue-sea-drink.jpg?w=2000');
   background-size: cover;;
   background-attachment:fixed;
   position:absolute;
   background-repeat: no-repeat;
+  background-position: right;
 }
 .signIn-bgimg {
   width: 100vw;
