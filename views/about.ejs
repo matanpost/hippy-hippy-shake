@@ -1,4 +1,94 @@
-<h1>About page</h1>
 
-<h1>Details</h1>
-<p>page with information about the club</p>
+<div class="container-fluid  members-bgimg"   >
+    <div class="card row justify-content-start first-div-width pt-3 mb-5" style="width:30rem; background: rgba(255, 255, 255, 0.5); margin-top: 4rem;">
+    
+
+  <h1 style="font-family: 'Irish Grover', cursive; text-align: center;">ABOUT US</h1>
+    <p>Welcome to the Hippy and Hip cocktail sharing app, where we bring together our passion for cocktails, music and community, to create a one-of-a-kind experience for our customers.</p>
+    <p> We have spent years perfecting our craft and we would love to share our knowledge an experience with you. With our app, like in our bar, we believe that cocktails are an uplifting art form to be expressed and enjoyed by everybody. We use only the highest quality ingredients and collaborate with our customers to create unique and innovative recipes that you won't find anywhere else.</p>
+        <p> Our app is more than just a place to grab a recipe. We are a community of like-minded individuals who share a love of music, culture, and good times. That's why we encourage our customers to contribute their own cocktail recipes to our ever-growing collection, and we feature user-submitted recipes on our website for all of you to enjoy.</p>
+            <p> So whether you're looking for a refreshing summer cocktail or a unique and unexpected flavor combination, our app has something for you. And when you visit us in person, you can enjoy our laid-back atmosphere, live music events, and the warm welcome of our inclusive and diverse community.</p>
+                <p> As a registered member, you will get access to exclusive recipes and all the secrets and hardware to make your own moonshine, whiskey, vodka, gin and much more.</p>
+                    <p> Come and join us at the Hippy and Hippie beach app, and experience the best in mixology, music, and good vibes.</p>
+       
+      <div style="display: flex; justify-content: center; margin: 0 5px 0 5xp">
+          <a href="/recipes/AllRecipes" class="btn btn-primary m-2">Our Cocktails</a>
+          <a href="/members/membersOnlyRecipes" class="btn btn-primary m-2">Members Only Recipes</a>
+      
+        </div>
+      
+        <audio id="hippy-shake" src="/audio/The Hippy Hippy Shake.mp3"></audio>
+      <button id="play-button">Sound</button>
+      <label for="volume-control">Volume:</label>
+      <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.1">
+  </div>
+  </div>
+  
+  
+  
+    <script>
+      // an event for playing the music
+    window.addEventListener('load', () => {
+    const audio = document.getElementById('hippy-shake');
+    const button = document.getElementById('play-button');
+    const volumeControl = document.getElementById('volume-control');
+    // Set initial volume to 100%
+    audio.volume = 0.1;
+    // Add event listener to the button to play the audio when clicked
+    button.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        button.textContent = 'Stop';
+      } else {
+        audio.pause();
+        button.textContent = 'Play';
+      }
+    });
+    
+    // Add event listener to the volume control to update the volume when changed
+    volumeControl.addEventListener('input', () => {
+      audio.volume = volumeControl.value;
+    });
+  
+    });
+    </script>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <script>
+      // an event for playing the music
+    window.addEventListener('load', () => {
+    const audio = document.getElementById('hippy-shake');
+    const button = document.getElementById('play-button');
+    const volumeControl = document.getElementById('volume-control');
+    // Set initial volume to 100%
+    audio.volume = 0.1;
+    // Add event listener to the button to play the audio when clicked
+    button.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        button.textContent = 'Stop';
+      } else {
+        audio.pause();
+        button.textContent = 'Play';
+      }
+    });
+    
+    // Add event listener to the volume control to update the volume when changed
+    volumeControl.addEventListener('input', () => {
+      audio.volume = volumeControl.value;
+    });
+  
+    });
+    </script>
+  
+  </div>
+  
