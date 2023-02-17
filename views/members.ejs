@@ -1,23 +1,19 @@
 
-<!-- code for the audio element -->
-
-<!-- code for the audio element -->
-<div class="container-fluid  members-bgimg" >
-  <div class="card row justify-content-start first-div-width pt-3 mb-5" style="width:30rem; background: rgba(255, 255, 255, 0.5); margin-top: 4rem; max-height: 90vh;">
+<div class="container-fluid  members-bgimg"   >
+  <div class="card row justify-content-start first-div-width pt-3 mb-5" style="width:30rem; background: rgba(255, 255, 255, 0.5); margin-top: 4rem;">
   
-    <div class="homeshaker"  style="margin: auto;"></div>
-    <h1 style="font-family: 'Irish Grover', cursive; text-align: center;">Hello <% if (user.username) { %>
-        <%= user.username %>
-      <% } else { %>
-      to HIPPY HIPPY SHAKE
-      <% } %></h1>
-    
-      <p>As you know  <%= user.username %>, our cocktails are made with fresh, locally-sourced ingredients and come in a variety of fun and funky flavors.
+    <div class="homeshaker" style="margin: auto;"></div>
+<h1 style="font-family: 'Irish Grover', cursive; text-align: center;">WELCOME <% if (user.username) { %>
+    <%= user.username %>
+  <% } else { %>
+  to <br>HIPPY HIPPY SHAKE
+  <% } %></h1>
+  <p>As you know  <%= user.username %>, our cocktails are made with fresh, locally-sourced ingredients and come in a variety of fun and funky flavors.
     But since you're a beloved HHS member, we also offer you the best secrets to make you how moonshine, gin, vodka and much much more!!</p>
      
-      <div style="display: inline-block;">
-        <a href="/recipes/AllRecipes" class="btn btn-primary">Our Cocktails</a>
-        <a href="/members/membersOnlyRecipes" class="btn btn-primary">Members Only Recipes</a>
+    <div style="display: flex; justify-content: center; margin: 0 5px 0 5xp">
+        <a href="/recipes/AllRecipes" class="btn btn-primary m-2">Our Cocktails</a>
+        <a href="/members/membersOnlyRecipes" class="btn btn-primary m-2">Members Only Recipes</a>
     
       </div>
     
@@ -27,6 +23,7 @@
     <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.1">
 </div>
 </div>
+
 
 
   <script>

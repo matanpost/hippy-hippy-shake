@@ -27,45 +27,69 @@ padding: 20px;
 .landing-bgimg {
   width: 100vw;
   min-height: 100vh;
-  background-image: url('/images/shaker-beach1.jpg?w=2000');
+  background-image: url('/images/flay-lay-cocktail-essentials-with-shaker-copy-space.jpg?w=2000');
   background-size: cover;;
   background-attachment:fixed;
   position:absolute;
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right bottom ;
 }
+.home-bgimg {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('/images/cocktail-tropical-fruits-with-notepad.jpg');
+  background-size: cover;;
+  background-attachment:fixed;
+  position:absolute;
+  background-repeat: no-repeat;
+  background-position: right bottom ;
+}
+
 .signIn-bgimg {
   width: 100vw;
   min-height: 100vh;
-  background-image: url('https://img.freepik.com/free-photo/bartender-preparing-cocktail-counter_107420-96319.jpg?w=2000&t=st=1676488865~exp=1676489465~hmac=bfb6b4bd5adf5bb44b739903230f8579a1d3da2842df7e3c825b464edd6dd673?w=2000');
+  background-image: url('/images/picture-hands-girl-holding-cocktail-sea-background-it-looks-cool.jpg?w=2000');
   background-size: cover;;
   background-attachment:fixed;
   position:absolute;
   background-repeat: no-repeat;
+  background-position: right bottom ;
 }
 .signUp-bgimg {
   width: 100vw;
   min-height: 100vh;
-  background-image: url('https://img.freepik.com/free-photo/picture-hands-girl-holding-cocktail-sea-background-it-looks-cool_197531-1247.jpg?w=2000&t=st=1676489979~exp=1676490579~hmac=c4149b589cc939a53131f44ac03700655ba07d2f151e6a70035b4c66bdba477c?w=2000');
+  background-image: url('/images/bartender-preparing-cocktail-counter.jpg?w=2000');
   background-size: cover;;
   background-attachment:fixed;
   background-repeat: no-repeat;
+  background-position: left top;
 }
 .members-bgimg {
   width: 100vw;
   min-height: 100vh;
-  background-image: url('/images/shaker-pool.jpg?w=2000');
+  background-image: url('/images/mocktail-beach.jpg?w=2000');
   background-size: cover;;
   background-attachment:fixed;
   background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.allrecipes-bgimg {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('/images/cocktail-tropical-fruits-with-notepad.jpg?w=2000');
+  background-size: cover;;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 .addRecipe-bgimg {
   width: 100vw;
   min-height: 100vh;
-  background-image: url('https://img.freepik.com/free-photo/bartender-making-alcoholic-cocktail-summer-cocktail-bar_181624-48939.jpg?w=2000&t=st=1676535877~exp=1676536477~hmac=fcabc1363eb194d5e3c60c36edd83af045a0484d42515d16717fb308e38dabfb?w=2000&t=st=1676489979~exp=1676490579~hmac=c4149b589cc939a53131f44ac03700655ba07d2f151e6a70035b4c66bdba477c?w=2000');
+  background-image: url('/images/members-backround.png?w=2000');
   background-size: cover;
   background-attachment:fixed;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 .error-bgimg {
   width: 100vw;
@@ -74,6 +98,7 @@ padding: 20px;
   background-size: cover;
   background-attachment:fixed;
   background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .first-div-width{
@@ -163,11 +188,11 @@ div [class^="col-"]{
 .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
   transform: scale3d(1, 1, 1);
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
  .logo-nav {
     display: none;
   }
-}
+} */
 @media only screen and (max-width: 991px) {
   #main-nav {
      padding: 20px 0px 20px 30px;
@@ -180,6 +205,11 @@ padding-right: 0px;
    li{
     margin:5px 0 5px 0;
    }
+   .card-img-top{
+    min-height: 18rem;
+   }
+ 
+
  }
 
 .homeshaker {
@@ -191,6 +221,7 @@ padding-right: 0px;
   animation: shake 0.5s ease-in-out infinite;
   background-position: center;
   margin: 0;
+  padding: 0;
 }
 
 @keyframes shake {

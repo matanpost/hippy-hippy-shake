@@ -1,7 +1,9 @@
 
 <!-- code for the audio element -->
-<div class="container-fluid  recipe-details-bg" >
-  <div class="card row justify-content-start first-div-width pt-3 mb-5" style="width:30rem; background: rgba(255, 255, 255, 0.5); margin-top: 4rem; max-height: 90vh;">
+
+
+<div class="container-fluid  home-bgimg"   >
+  <div class="card row justify-content-start first-div-width pt-3 mb-5" style="width:30rem; background: rgba(255, 255, 255, 0.5); margin-top: 4rem;">
   
     <div class="homeshaker" style="margin: auto;"></div>
 <h1 style="font-family: 'Irish Grover', cursive; text-align: center;">WELCOME <% if (user.username) { %>
@@ -12,9 +14,9 @@
    <p>Our cocktails are made with fresh, locally-sourced ingredients and come in a variety of fun and funky flavors.</p>
         <p>Whether you're looking for a classic margarita or something more adventurous, we've got you covered.</p>
        
-        <div style="display: inline-block;">
-          <a href="/recipes/AllRecipes" class="btn btn-primary">Our Cocktails</a>
-          <a href="/members/membersOnlyRecipes" class="btn btn-primary">Members Only Recipes</a>
+        <div style="display: flex; justify-content: center; margin: 0 5px 0 5xp">
+          <a href="/recipes/AllRecipes" class="btn btn-primary m-2">Our Cocktails</a>
+          <a href="/members/membersOnlyRecipes" class="btn btn-primary m-2">Members Only Recipes</a>
 
         </div>
         <audio id="hippy-shake" src="/audio/The Hippy Hippy Shake.mp3"></audio>

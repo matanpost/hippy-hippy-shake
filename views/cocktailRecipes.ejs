@@ -1,7 +1,19 @@
+<style>
+  body {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('/images/cocktail-tropical-fruits-with-notepad.jpg?w=2000');
+  background-size: cover;;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+</style>
+
 <% if (!recipes.length) { %>
     There are no recipes for now!
     <% } %>
-      <div class="container-fluid text-center landing-bgimg">
+      <div class="container-fluid text-center allrecipes-bgimg">
         <div class="row justify-content-start first-div-width">
           <% recipes.forEach(recipe=> { %>
             <div class="col-md-3 col-sm-6 p-4 ">

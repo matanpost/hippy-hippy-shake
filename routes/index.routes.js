@@ -7,8 +7,8 @@ router.get("/", (req, res, next) => {
 });
 
 /* GET landing page */
-router.get("/404", (req, res, next) => {
-  res.render("404", {user: req.session.user || "undefined"});
+router.get("/503", (req, res, next) => {
+  res.render("503", {user: req.session.user || "undefined"});
 });
 
 // router.get("/recipes/freerecipes", (req, res, next) => {
