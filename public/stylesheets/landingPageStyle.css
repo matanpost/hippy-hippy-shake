@@ -34,23 +34,27 @@
 	font-size: 4rem;
 	text-align: center;
 	margin: 0;
-	padding: 2rem;
     font-family: 'Irish Grover', cursive;
     height: fit-content;
 	padding-top: 60px;
+	font-weight: 900;
 }
 
 .header h1 {
   font-size: 5rem;
   -webkit-background-clip: text;
 	background-clip: text;
-	background-image: url('https://www.shutterstock.com/image-photo/young-woman-bikini-lying-on-260nw-544382269.jpg');
+	background-image: url('https://img.freepik.com/free-vector/psychedelic-groovy-background_23-2148861141.jpg');
+	background-position: center bottom;
+	background-size: cover;
 	color: transparent;
 	text-align: center;
-	-webkit-text-stroke: 1px rgba(221, 221, 221, 0.308);
-	font-weight: bold;            
-	
+	-webkit-text-stroke: 1px rgb(0, 128, 255);
+	font-weight: bold;      
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.446);  
 }
+
+
 
 .content {
 	height: fit-content;
@@ -68,6 +72,7 @@
 .age-verification {
 	background-color: #ffffff70;
 	padding: 2rem;
+	margin-top: 5em;
 }
 
 .content p {
@@ -116,7 +121,7 @@ input[type="date"] {
 	}
 
 	.age-verification {
-		padding: 3rem;
+		margin: 0 2em 0 2em ;
 	}
 	.landingPic img{
 		height: 250px;
