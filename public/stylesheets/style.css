@@ -27,12 +27,12 @@ padding: 20px;
 .landing-bgimg {
   width: 100vw;
   min-height: 100vh;
-  background-image: url('/images/summer-product-backdrop-blue-sea-drink.jpg?w=2000');
+  background-image: url('/images/shaker-beach1.jpg?w=2000');
   background-size: cover;;
   background-attachment:fixed;
   position:absolute;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom;
 }
 .signIn-bgimg {
   width: 100vw;
@@ -51,6 +51,14 @@ padding: 20px;
   background-attachment:fixed;
   background-repeat: no-repeat;
 }
+.members-bgimg {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('/images/shaker-pool.jpg?w=2000');
+  background-size: cover;;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+}
 .addRecipe-bgimg {
   width: 100vw;
   min-height: 100vh;
@@ -59,6 +67,15 @@ padding: 20px;
   background-attachment:fixed;
   background-repeat: no-repeat;
 }
+.error-bgimg {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('/images/404.jpg?w=2000');
+  background-size: cover;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+}
+
 .first-div-width{
   /* display: flex;
   flex-wrap:wrap; */
@@ -166,18 +183,20 @@ padding-right: 0px;
  }
 
 .homeshaker {
-  background-image: url('/images/shaker-anim.png');
+  background-image: url('/images/LOG_2.png');
   background-size: 60%;
   background-repeat: no-repeat;
-  width: 200px;
+  width: 400px;
   height: 400px;
-  animation: shake 0.7s ease-in-out infinite;
+  animation: shake 0.5s ease-in-out infinite;
+  background-position: center;
+  margin: 0;
 }
 
 @keyframes shake {
   0% { transform: rotate(0deg); }
-  25% { transform: rotate(13deg); }
-  50% { transform: rotate(-14deg); }
-  75% { transform: rotate(6deg); }
-  100% { transform: rotate(-1deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }

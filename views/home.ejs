@@ -1,7 +1,9 @@
 
 <!-- code for the audio element -->
-<div class="home-top">
-<div class="homeshaker"></div>
+<div class="container-fluid  recipe-details-bg" >
+  <div class="card row justify-content-start first-div-width pt-3 mb-5" style="width:30rem; background: rgba(255, 255, 255, 0.5); margin-top: 4rem; max-height: 90vh;">
+  
+    <div class="homeshaker" style="margin: auto;"></div>
 <h1>WELCOME <% if (user.username) { %>
     <%= user.username %>
   <% } else { %>
@@ -19,6 +21,9 @@
 <button id="play-button">Sound</button>
 <label for="volume-control">Volume:</label>
 <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.1">
+</div>
+</div>
+
 
   <script>
     // an event for playing the music

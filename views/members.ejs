@@ -1,28 +1,69 @@
 
 <!-- code for the audio element -->
 
+<!-- code for the audio element -->
+<div class="container-fluid  members-bgimg" >
+  <div class="card row justify-content-start first-div-width pt-3 mb-5" style="width:30rem; background: rgba(255, 255, 255, 0.5); margin-top: 4rem; max-height: 90vh;">
+  
+    <div class="homeshaker"  style="margin: auto;"></div>
+    <h1>Hello <% if (user.username) { %>
+        <%= user.username %>
+      <% } else { %>
+      to HIPPY HIPPY SHAKE
+      <% } %></h1>
+    
+      <p>As you know  <%= user.username %>, our cocktails are made with fresh, locally-sourced ingredients and come in a variety of fun and funky flavors.
+    But since you're a beloved HHS member, we also offer you the best secrets to make you how moonshine, gin, vodka and much much more!!</p>
+     
+      <div style="display: inline-block;">
+        <a href="/recipes/AllRecipes" class="btn btn-primary">Our Cocktails</a>
+        <a href="/members/membersOnlyRecipes" class="btn btn-primary">Members Only Recipes</a>
+    
+      </div>
+    
+      <audio id="hippy-shake" src="/audio/The Hippy Hippy Shake.mp3"></audio>
+    <button id="play-button">Sound</button>
+    <label for="volume-control">Volume:</label>
+    <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.1">
+</div>
+</div>
 
-<div class="home-top">
-<div class="homeshaker"></div>
-<h1>WELCOME MEMBERS<% if (user.username) { %>
-    <%= user.username %>
-  <% } else { %>
-  to HIPPY HIPPY SHAKE
-  <% } %></h1>
 
-  <p>As you know  <%= user.username %>, our cocktails are made with fresh, locally-sourced ingredients and come in a variety of fun and funky flavors.</p>
-  <p>But since you're a beloved HHS member, we offer you the best secrets to make you how moonshine, gin, vocka and much much more!!</p>
- 
-  <div style="display: inline-block;">
-    <a href="/recipes/AllRecipes" class="btn btn-primary">Our Cocktails</a>
-    <a href="/members/membersOnlyRecipes" class="btn btn-primary">Members Only Recipes</a>
+  <script>
+    // an event for playing the music
+  window.addEventListener('load', () => {
+  const audio = document.getElementById('hippy-shake');
+  const button = document.getElementById('play-button');
+  const volumeControl = document.getElementById('volume-control');
+  // Set initial volume to 100%
+  audio.volume = 0.1;
+  // Add event listener to the button to play the audio when clicked
+  button.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      button.textContent = 'Stop';
+    } else {
+      audio.pause();
+      button.textContent = 'Play';
+    }
+  });
+  
+  // Add event listener to the volume control to update the volume when changed
+  volumeControl.addEventListener('input', () => {
+    audio.volume = volumeControl.value;
+  });
 
-  </div>
+  });
+  </script>
 
-  <audio id="hippy-shake" src="/audio/The Hippy Hippy Shake.mp3"></audio>
-<button id="play-button">Sound</button>
-<label for="volume-control">Volume:</label>
-<input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.1">
+</div>
+
+
+
+
+
+
+
 
 
   <script>
