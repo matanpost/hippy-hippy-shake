@@ -47,7 +47,8 @@
 	background-image: url('https://www.shutterstock.com/image-photo/young-woman-bikini-lying-on-260nw-544382269.jpg');
 	color: transparent;
 	text-align: center;
-	-webkit-text-stroke: 1px rgba(0, 255, 255, 0.377);            
+	-webkit-text-stroke: 1px rgba(221, 221, 221, 0.308);
+	font-weight: bold;            
 	
 }
 
